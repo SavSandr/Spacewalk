@@ -1,0 +1,331 @@
+@import "global";
+@import "fonts";
+
+body {
+    background-image: url(../images/space-bg2.jpg);
+    background-repeat: repeat;
+    background-position: 0 0;
+}
+
+.header {
+    height: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    border-bottom: 1px solid #fff;
+}
+.menu{
+    display: flex;
+}
+.menu__btn{
+    width: 30px;
+    cursor: pointer;
+    display: none;
+    div{
+        width: 100%;
+        height: 3px;
+        margin-bottom: 5px;
+        background-color: #820896;
+    }
+}
+.menu__list {
+    padding-left: 300px;
+
+    a {
+        text-transform: uppercase;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all .3s;
+    }
+    li {
+        display: inline-block;
+        & + li {
+            margin-left: 30px;
+        }
+        &:hover{
+            a{
+                color: rgb(207, 99, 221);
+            }
+        }
+    }
+}
+
+.intro {
+    position: relative;
+    min-height: 100vh;
+}
+.intro__inner {
+    text-align: center;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.intro__img {
+    position: absolute;
+}
+.img-planets {
+    left: 60px;
+    top: 110px;
+}
+.img-planet {
+    left: 53px;
+    top: 80px;
+}
+
+.img-galaxy {
+    right: 0;
+    top: 10px;
+}
+.intro__title {
+    font-size: 72px;
+    margin-bottom: 15px;
+    font-family: "Xirod", sans-serif;
+}
+.intro__subtitle {
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+// ! start planets
+
+.planets {
+    padding: 70px 0;
+    // position: relative;
+    &__title {
+        font-size: 48px;
+        font-family: "Space", sans-serif;
+        margin-bottom: 70px;
+    }
+}
+.planets__inner{
+    padding-left: 20%;
+}
+.planets__title {
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 300;
+    font-size: 56px;
+}
+.planets__item {
+    
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.item__img {
+    max-width: 250px;
+    margin-right: 100px;
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.item__info {
+    position: relative;
+}
+.item__title {
+    display: inline-block;
+    font-size: 32px;
+    font-family: "Space", sans-serif;
+    margin-bottom: 20px;
+}
+.item__arrow {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 26px;
+    cursor: pointer;
+    img {
+        width: 100%;
+    }
+}
+.item__description {
+    margin-top: 30px;
+    display: none;
+}
+.item__text {
+    margin-bottom: 20px;
+    max-width: 530px;
+    width: 100%;
+    margin-top: 40px;
+}
+.item__link {
+    width: 160px;
+    padding: 13px;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+}
+.footer {
+    height: 60px;
+    .menu__list{
+        padding-left: 0;
+    }
+}
+.footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    border-top: 1px solid #fff;
+}
+// ! end planets
+
+// ! start about
+
+.about__title {
+    font-family: "Space", sans-serif;
+    font-size: 54px;
+}
+.about {
+    padding-top: 110px;
+    text-align: center;
+}
+.about__title {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.about__img {
+    margin-bottom: 30px;
+}
+
+.about__text {
+    max-width: 720px;
+    line-height: 28px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.about__button {
+    border: 1px solid #fff;
+    padding: 15px 15px 15px 30px;
+    width: 170px;
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+    transition: all 0.3s;
+
+    & + .about__button {
+        margin-left: 20px;
+    }
+    &:hover {
+        color: rgb(207, 99, 221);
+        border: 1px solid rgb(207, 99, 221);
+    }
+    &::after {
+        content: "";
+        background-image: url(../images/arrow-btn.png);
+        position: absolute;
+        top: 18px;
+        right: 32px;
+        width: 15px;
+        height: 10px;
+    }
+}
+
+.section-title {
+    font-size: 36px;
+    font-family: "Space", sans-serif;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+.facts__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+.facts__item {
+    max-width: 31%;
+    width: 100%;
+    min-height: 260px;
+    background-color: rgba(266, 266, 266, 0.2);
+    margin-bottom: 35px;
+    padding: 20px;
+    transition: all 0.3s;
+    &:hover {
+        transform: scale(1.1);
+        .facts__number {
+            color: rgb(207, 99, 221);
+        }
+    }
+}
+.facts__number {
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.2s;
+}
+.facts__text {
+    line-height: 24px;
+}
+.slider {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.slider__item {
+    max-width: 340px;
+    img {
+        width: 100%;
+    }
+}
+.slick-arrow {
+    background-color: transparent;
+    outline: none;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 2;
+    position: absolute;
+    cursor: pointer;
+}
+.slick-next {
+    right: 0px;
+}
+.slick-prev {
+    left: 0px;
+    z-index: 1;
+}
+.slick-dots li button {
+    width: 11px;
+    height: 11px;
+    background-color: #c4c4c4;
+    border-radius: 50%;
+    font-size: 0;
+    display: block;
+    cursor: pointer;
+    outline: none;
+}
+.slick-dots li {
+    display: inline-block;
+    & + li {
+        margin-left: 8px;
+    }
+}
+.slick-dots {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.slick-dots li.slick-active button {
+    background-color: #820896;
+}
+
+// ! end about
+
+@import "media";
